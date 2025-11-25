@@ -5,7 +5,7 @@ import Icon from "@/components/ui/icon";
 import { useState } from "react";
 
 const Index = () => {
-  const [activePlan, setActivePlan] = useState<'free' | 'pro'>('free');
+  const [activePlan, setActivePlan] = useState<'free' | 'pro' | 'premium'>('pro');
 
   return (
     <div className="min-h-screen bg-background">
@@ -26,7 +26,7 @@ const Index = () => {
       <section className="pt-32 pb-20 px-4">
         <div className="container mx-auto text-center max-w-4xl">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-            Учёба - не проблема. <br />
+            Учеба - не проблема. <br />
             <span className="text-gradient">Проблема - начать.</span>
           </h1>
           <p className="text-3xl md:text-4xl font-bold mb-8 animate-fade-in text-gradient">
@@ -196,7 +196,7 @@ const Index = () => {
             Что умеет <span className="text-gradient">StudyGrow</span>
           </h2>
           <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
-            Все инструменты для продуктивной учёбы в одном приложении
+            Все инструменты для продуктивной учебы в одном приложении
           </p>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -234,12 +234,12 @@ const Index = () => {
       </section>
 
       <section className="py-20 px-4 bg-muted/20">
-        <div className="container mx-auto max-w-5xl">
+        <div className="container mx-auto max-w-7xl">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
             <span className="text-gradient">Тарифы</span>
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             <Card 
               className={`glass p-8 cursor-pointer transition-all ${activePlan === 'free' ? 'border-primary scale-105' : ''}`}
               onClick={() => setActivePlan('free')}
@@ -259,7 +259,7 @@ const Index = () => {
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-center gap-3">
                     <Icon name="Check" size={20} className="text-primary" />
-                    <span>{item}</span>
+                    <span className="text-sm">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -285,17 +285,55 @@ const Index = () => {
                   "Улучшенное планирование",
                   "Дополнительные питомцы",
                   "Наборы аксессуаров",
+                  "Синхронизация устройств",
+                  "Экспорт данных",
+                  "Темы оформления",
                   "Приоритетная поддержка",
                   "Без рекламы"
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-center gap-3">
                     <Icon name="Check" size={20} className="text-accent" />
-                    <span>{item}</span>
+                    <span className="text-sm">{item}</span>
                   </li>
                 ))}
               </ul>
               <Button className="w-full gradient-accent hover:opacity-90">
                 Попробовать Pro
+              </Button>
+            </Card>
+
+            <Card 
+              className={`glass p-8 cursor-pointer transition-all relative overflow-hidden ${activePlan === 'premium' ? 'border-primary scale-105' : ''}`}
+              onClick={() => setActivePlan('premium')}
+            >
+              <Badge className="absolute top-4 right-4 bg-gradient-primary text-white">Premium</Badge>
+              <div className="text-center mb-6">
+                <h3 className="text-3xl font-bold mb-2">Premium</h3>
+                <div className="text-5xl font-bold text-gradient mb-4">599₽</div>
+                <p className="text-muted-foreground">в месяц</p>
+              </div>
+              <ul className="space-y-3 mb-8">
+                {[
+                  "Всё из Pro",
+                  "Персональный ИИ-коуч",
+                  "Неограниченные питомцы",
+                  "Эксклюзивные темы",
+                  "Расширенная кастомизация",
+                  "Командная работа (до 5 человек)",
+                  "Интеграции с Notion, Trello",
+                  "Приоритет в новых функциях",
+                  "Персональный менеджер",
+                  "Скидки на курсы",
+                  "Доступ к закрытому сообществу"
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-center gap-3">
+                    <Icon name="Check" size={20} className="text-primary" />
+                    <span className="text-sm">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <Button className="w-full gradient-primary hover:opacity-90">
+                Попробовать Premium
               </Button>
             </Card>
           </div>
