@@ -25,18 +25,12 @@ const Index = () => {
 
       <section className="pt-32 pb-20 px-4">
         <div className="container mx-auto text-center max-w-4xl">
-          <Badge className="mb-6 bg-primary/20 text-primary border-primary/30 text-lg px-6 py-2 animate-fade-in">
-            🎓 Для студентов 1-4 курсов
-          </Badge>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-            Что это? <br />
-            <span className="text-gradient">Куда я попал?</span>
+            Учёба - не проблема. <br />
+            <span className="text-gradient">Проблема - начать.</span>
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-4 animate-fade-in">
-            Учёба - не проблема. Проблема - начать.
-          </p>
-          <p className="text-2xl md:text-3xl font-semibold mb-8 animate-fade-in">
-            Мы помогаем <span className="text-gradient">начать</span>.
+          <p className="text-3xl md:text-4xl font-bold mb-8 animate-fade-in text-gradient">
+            Мы помогаем начать.
           </p>
           <p className="text-lg text-muted-foreground mb-12 leading-relaxed max-w-3xl mx-auto animate-fade-in">
             StudyGrow - это приложение-помощник, который понимает, как ты учишься, когда работаешь продуктивнее и почему иногда хочется просто лечь и ничего не делать. Он помогает перестать «делать всё завтра» и наконец начать жить без вечных дедлайнов, бессонных ночей и саможаления.
@@ -55,10 +49,7 @@ const Index = () => {
       <section className="py-20 px-4 bg-muted/20">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Проблема <span className="text-gradient">студентов</span>
-            </h2>
-            <p className="text-2xl font-semibold text-destructive mb-4">
+            <p className="text-2xl font-semibold mb-4">
               Прокрастинация - главный враг студента.
             </p>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -139,9 +130,7 @@ const Index = () => {
             ))}
           </div>
 
-          <p className="text-center text-xl mt-12 font-semibold">
-            StudyGrow <span className="text-gradient">не заставляет</span> - оно помогает тебе стать чуть более собранным каждый день.
-          </p>
+
         </div>
       </section>
 
