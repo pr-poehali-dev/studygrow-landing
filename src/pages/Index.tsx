@@ -535,6 +535,35 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-16 px-4 border-t border-white/10">
+        <div className="container mx-auto max-w-4xl">
+          <Card className="glass p-8">
+            <div className="flex flex-col md:flex-row gap-6 items-center">
+              <div className="w-20 h-20 rounded-xl gradient-accent flex items-center justify-center flex-shrink-0">
+                <Icon name="BookOpen" size={40} className="text-white" />
+              </div>
+              <div className="flex-1 text-center md:text-left">
+                <h3 className="text-2xl font-bold mb-2">
+                  <span className="text-gradient">Прочитай статью о прокрастинации</span>
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  Узнай, почему мы откладываем дела и как с этим справиться. Практические советы и научные исследования.
+                </p>
+                <a 
+                  href="https://dzen.ru/a/aS1SfjpxRU4bbskG" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-primary hover:text-accent transition-colors font-semibold"
+                >
+                  Читать статью на Дзен
+                  <Icon name="ExternalLink" size={18} />
+                </a>
+              </div>
+            </div>
+          </Card>
+        </div>
+      </section>
+
       <footer className="py-12 px-4 border-t border-white/10">
         <div className="container mx-auto text-center">
           <div className="flex items-center justify-center gap-2 mb-4">
