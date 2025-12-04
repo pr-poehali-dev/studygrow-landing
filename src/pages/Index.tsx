@@ -3,8 +3,10 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Icon from "@/components/ui/icon";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
+  const navigate = useNavigate();
   const [activePlan, setActivePlan] = useState<'free' | 'pro' | 'premium'>('pro');
 
   return (
@@ -36,7 +38,7 @@ const Index = () => {
             StudyGrow - это приложение-помощник, который понимает, как ты учишься, когда работаешь продуктивнее и почему иногда хочется просто лечь и ничего не делать. Он помогает перестать «делать всё завтра» и наконец начать жить без вечных дедлайнов, бессонных ночей и саможаления.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-scale-in">
-            <Button size="lg" className="gradient-primary hover:opacity-90 text-lg px-8 py-6 animate-pulse-glow">
+            <Button size="lg" className="gradient-primary hover:opacity-90 text-lg px-8 py-6 animate-pulse-glow" onClick={() => navigate('/register?plan=free')}>
               Начать бесплатно
             </Button>
             <Button size="lg" variant="outline" className="border-primary/50 hover:bg-primary/10 text-lg px-8 py-6">
@@ -263,7 +265,7 @@ const Index = () => {
                   </li>
                 ))}
               </ul>
-              <Button className="w-full gradient-primary hover:opacity-90">
+              <Button className="w-full gradient-primary hover:opacity-90" onClick={() => navigate('/register?plan=free')}>
                 Начать бесплатно
               </Button>
             </Card>
@@ -297,7 +299,7 @@ const Index = () => {
                   </li>
                 ))}
               </ul>
-              <Button className="w-full gradient-accent hover:opacity-90">
+              <Button className="w-full gradient-accent hover:opacity-90" onClick={() => navigate('/register?plan=pro')}>
                 Попробовать Pro
               </Button>
             </Card>
@@ -332,7 +334,7 @@ const Index = () => {
                   </li>
                 ))}
               </ul>
-              <Button className="w-full gradient-primary hover:opacity-90">
+              <Button className="w-full gradient-primary hover:opacity-90" onClick={() => navigate('/register?plan=premium')}>
                 Попробовать Premium
               </Button>
             </Card>
